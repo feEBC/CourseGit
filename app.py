@@ -6,7 +6,9 @@ modo = st.radio(
     "Convertir de:",
     [
         "Celsius a Fahrenheit",
-        "Fahrenheit a Celsius"
+        "Fahrenheit a Celsius",
+        "Celsius a Kelvin",
+        "Kelvin a Celsius"
     ]
 )
 
@@ -16,6 +18,14 @@ if modo == "Celsius a Fahrenheit":
     resultado = valor * 9 / 5 + 32
     st.success(f"{valor} °C son {round(resultado, 2)} °F")
 
-else:
+elif modo == "Fahrenheit a Celsius":
     resultado = (valor - 32) * 5 / 9
     st.success(f"{valor} °F son {round(resultado, 2)} °C")
+
+elif modo == "Celsius a Kelvin":
+    resultado = valor + 273.15
+    st.success(f"{valor} °C son {round(resultado, 2)} K")
+
+elif modo == "Kelvin a Celsius":
+    resultado = valor - 273.15
+    st.success(f"{valor} K son {round(resultado, 2)} °C")
