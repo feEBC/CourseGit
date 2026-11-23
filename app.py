@@ -30,4 +30,4 @@ elif modo == "Kelvin a Celsius":
     resultado = valor - 273.15
     st.success(f"{valor} K son {round(resultado, 2)} °C")
     
-st.caption("Made with streamlit")
+st.caption("Hecho con streamlit")
